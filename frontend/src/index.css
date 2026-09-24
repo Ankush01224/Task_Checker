@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #111113;
+  --color-ink-soft: #6b6b72;
+  --color-paper: #ffffff;
+  --color-surface: #f7f7f8;
+  --color-line: #e4e4e7;
+  --color-accent: #2f5fe0;
+  --color-accent-hover: #2249b8;
+  --color-success: #1c8a4b;
+  --color-success-bg: #eaf7ef;
+  --color-danger: #c0362c;
+  --color-danger-bg: #fbebea;
+
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+/* Visible keyboard focus everywhere, not just on :hover-capable pointers */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
